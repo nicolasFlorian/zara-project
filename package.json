@@ -3,16 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "src/scripts/main.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "svg": "node prebuild.cjs"
+    "svg": "node svg.cjs",
+    "webp": "node webp.cjs"
   },
   "devDependencies": {
     "@spiriit/vite-plugin-svg-spritemap": "^2.2.4",
     "chokidar": "^3.6.0",
     "sass": "^1.76.0",
-    "vite": "^5.2.0"
+    "vite": "^5.2.0",
+    "vite-plugin-imagemin": "^0.6.1"
   }
 }

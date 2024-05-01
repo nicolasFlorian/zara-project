@@ -1,0 +1,15 @@
+@use 'variables' as v;
+
+// MEDIA QUERIES
+
+@mixin breakpoint($user-value){
+    $map: map-get(v.$breakpoints, $user-value);
+    @if $map{
+        @media (#{$map}) {
+            @content;
+        }
+    }@else{
+        @error "Breakpoint '#{$user-value}' not found in $breakpoints map.";
+    }
+};
+
