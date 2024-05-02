@@ -55,3 +55,29 @@ $breakpoints: (
 }
 
 $font-family: 'Helvetica-Neue', sans-serif;
+
+// COLORS
+
+$primary-color: #fff;
+$secondary-color: #000;
+
+$progress-bar-bg: #cccccc;
+$progress-bar-progress: #000;
+$progress-bar-bg-dark: #5f5f5f;
+$progress-bar-progress-dark: #fff;
+
+:root{
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+
+    --progress-bar-bg: #{$progress-bar-bg};
+    --progress-bar-progress: #{$progress-bar-progress};
+}
+
+body[data-theme="dark"]{
+    --primary-color: #{$secondary-color};
+    --secondary-color: #{$primary-color};
+
+    --progress-bar-bg: #{$progress-bar-bg-dark};
+    --progress-bar-progress: #{$progress-bar-progress-dark};
+}

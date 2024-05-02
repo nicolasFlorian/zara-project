@@ -1,6 +1,7 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 @use 'products_container';
+@use 'animations';
 
 
 *{
@@ -17,6 +18,7 @@ svg{
 
 body{
     padding: 20px 80px;
+    background-color: var(--primary-color);
 
     @include m.breakpoint('all-md'){
         padding: 20px;

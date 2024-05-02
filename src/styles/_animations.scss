@@ -1,0 +1,32 @@
+@use 'mixins' as m;
+
+@keyframes scaleBar{
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.008);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@include m.breakpoint('all-md') {
+    @keyframes scaleBar{
+        0% {
+            transform: scaleX(1);
+        }
+        50% {
+            transform: scaleX(1.010);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.scaleBar{
+    animation: scaleBar .5s ease;
+    transform-origin: left;
+}
