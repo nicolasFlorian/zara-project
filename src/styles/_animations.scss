@@ -12,13 +12,13 @@
     }
 }
 
-@include m.breakpoint('all-md') {
+@include m.breakpoint('all-sm') {
     @keyframes scaleBar{
         0% {
             transform: scaleX(1);
         }
         50% {
-            transform: scaleX(1.010);
+            transform: scaleX(1.012);
         }
         100% {
             transform: scaleX(1);

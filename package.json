@@ -5,11 +5,12 @@
   "type": "module",
   "main": "src/scripts/main.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "svg": "node svg.cjs",
-    "webp": "node webp.cjs"
+    "webp": "node webp.cjs",
+    "browser-sync": "browser-sync start --server 'src' --files 'src/index.html' --no-notify --no-open"
   },
   "devDependencies": {
     "@spiriit/vite-plugin-svg-spritemap": "^2.2.4",

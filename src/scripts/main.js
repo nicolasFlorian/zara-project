@@ -1,6 +1,6 @@
 import { showDescription } from "./containerCard.js";
 import { discountElement } from "./discountPrice.js";
-import { progressBar } from "./progressBar.js";
+import { Slider } from "./progressBar.js";
 
 const descriptionArea = document.querySelectorAll('.product__card__description');
 
@@ -16,5 +16,5 @@ priceArea.forEach(element => {
     discountElement(element);
 })
 
-progressBar();
+new Slider('.products__container', '.progress');
 

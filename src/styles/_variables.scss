@@ -1,13 +1,15 @@
 // BREAKPOINTS
 
 $breakpoints: (
-    "xs": "max-width: 575px",
+    "xxs": "max-width: 380px",
+    "xs": "(min-width: 381px) and (max-width: 575px)",
     "sm": "(min-width: 576px) and (max-width: 767px)",
     "md": "(min-width: 768px) and (max-width: 991px)",
     "lg": "(min-width: 992px) and (max-width: 1199px)",
     "xl": "min-width: 1200px",
-    "all-md": "(max-width: 768px)",
-    "all-sm": "(max-width: 576px)",
+    "all-xs": "max-width: 575px",
+    "all-md": "max-width: 991px",
+    "all-sm": "max-width: 767px",
 );
 
 // FONTS
