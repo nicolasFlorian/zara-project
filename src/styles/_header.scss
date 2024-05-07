@@ -1,0 +1,127 @@
+.header{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid var(--secondary-color-opacity);
+    padding-block: 30px !important;
+    position: relative;
+
+    &__logo__container{
+        display: flex;
+
+        .logo{
+            fill: var(--secondary-color);
+            width: 250px;
+            height: 110px;
+        }
+    }
+
+    &__nav{
+        display: flex;
+        gap: 50px;
+        align-items: center;
+
+        .menu__btn{
+            padding: 10px;
+        }
+
+        &__options{
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            gap: 20px;
+            
+            .item{
+                font-size: 14px;
+                font-weight: 300;
+                cursor: pointer;
+
+                &:hover{
+                    text-shadow: -0.2px 0 var(--secondary-color), 0 -0.2px var(--secondary-color), 0.2px 0 var(--secondary-color), 0 0.2px var(--secondary-color);
+                }
+
+                &[data-category="sale"]{
+                    .link{
+                        color: var(--attention-color);
+                    }
+                    &:hover{
+                        text-shadow: -0.2px 0 var(--attention-color), 0 -0.2px var(--attention-color), 0.2px 0 var(--attention-color), 0 0.2px var(--attention-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &__options{
+        justify-self: end;
+        display: flex;
+        gap: 40px;
+
+        &__search{
+            display: flex;
+
+            .search__input{
+                height: 100%;
+                width: 230px;
+                border-radius: 0px;
+            }
+
+            .search__btn{
+                border: 1px solid var(--secondary-color);
+                border-left: none;
+                padding-inline: 10px;
+                gap: 8px;
+                span{
+                    font-size: 12px;
+                    color: var(--secondary-color);
+                }
+
+                svg{
+                    fill: var(--secondary-color);
+                }
+
+                &:hover{
+                    background-color: var(--secondary-color);
+                    span{
+                        color: var(--primary-color);
+                    }
+                    svg{
+                        fill: var(--primary-color);
+                    }
+                }
+            }
+        }
+
+        &__btn{
+            display: flex;
+
+            .item{
+                display: flex;
+                align-items: center;
+
+                .btn{
+                    gap: 8px;
+
+                    .bag__text{
+                        display: flex;
+                        gap: 4px;
+                    }
+
+                    svg{
+                        width: 17px;
+                        height: 17px;
+                        fill: var(--secondary-color);
+                    }
+                }
+
+                .mode__btn[aria-label="moon"]{
+                    gap: 6px;
+                    svg{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,18 +4,1133 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Fara Brasil</title>
+    <title>ZARA Brasil</title>
+    <link rel="icon" type="image/x-icon" href="icons/logos/favicon.ico"/>
     <script type="module" src="scripts/main.js" defer></script>
     <link rel="stylesheet" href="styles/main.scss">
   </head>
 
   <body data-theme="light">
-    <header></header>
-    <main>
 
-      <section class="carrousel__products__container">
+    <header class="section header">
 
-        <section class="products__container">
+      <nav class="header__nav">
+        <button class="btn menu__btn icon__btn" aria-label="menu">
+          <svg class="menu__icon">
+            <use xlink:href="./__spritemap#sprite-menu"></use>
+          </svg>
+        </button>
+        <ul class="header__nav__options">
+          <li class="item" data-category="feminino">
+            <a class="link">FEMININO</a>
+          </li>
+          <li class="item" data-category="masculino">
+            <a class="link">MASCULINO</a>
+          </li>
+          <li class="item" data-category="kids">
+            <a class="link">KIDS</a>
+          </li>
+          <li class="item" data-category="sale">
+            <a class="link">SALE</a>
+          </li>
+          <li class="item" data-category="bolsas">
+            <a class="link">BOLSAS</a>
+          </li>
+          <li class="item" data-category="perfumes">
+            <a class="link">PERFUMES</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__categories__popup" aria-hidden="true">
+        <ul class="header__nav__options">
+          <li class="item" data-category="feminino">
+            <a href="#" class="link">FEMININO</a>
+          </li>
+          <li class="item" data-category="masculino">
+            <a href="#" class="link">MASCULINO</a>
+          </li>
+          <li class="item" data-category="kids">
+            <a href="#" class="link">KIDS</a>
+          </li>
+          <li class="item" data-category="sale">
+            <a href="#" class="link">SALE</a>
+          </li>
+          <li class="item" data-category="bolsas">
+            <a href="#" class="link">BOLSAS</a>
+          </li>
+          <li class="item" data-category="perfumes">
+            <a href="#" class="link">PERFUMES</a>
+          </li>
+        </ul>
+
+        <div class="categories__container">
+
+          <ul class="categories" data-id="false">
+            <div class="categories__division nothing__selected__division">
+              <li class="nothing__selected" data-new="false">
+                <div class="arrow__container">
+                  <svg class="arrow__icon arrowMoving">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+                <span>SELECIONE UMA CATEGORIA</span>
+              </li>
+            </div>
+          </ul>
+
+          <ul class="categories" data-id="feminino">
+            <div class="categories__division">
+              <li class="item" data-new-option="true">
+                <a href="#" class="link">// NEW</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+            
+            <div class="categories__division">
+              <li class="item" data-new="true">
+                <a href="#" class="link">ZARA SRPLS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="true">
+                <a href="#" class="link">DIA DAS MÃES</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="update">
+                <a href="#" class="link">ZARA ORIGINS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+
+            <div class="categories__division">
+              <li class="item" data-new="false">
+                <a href="#" class="link">CASACOS | TRENCH</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">JAQUETAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">TRICOT</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">COLETES</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">BLAZERS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">TERNOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">VESTIDOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">MACACÕES</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">CAMISAS | BLUSAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">TOPS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">CAMISETAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">BODY</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">MOLETONS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">CALÇAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">JEANS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">BERMUDAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">SAIAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">CONJUNTOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">COURO</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">SAPATOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">BOLSAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">LINGERIE</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">PERFUMES</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">ACESSÓRIOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="update" data-category="sale">
+                <a href="#" class="link">SPECIAL PRICES</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">SPECIAL EDITION</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">CARTÃO PRESENTE</a>
+              </li>
+            </div>
+
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">JOIN LIFE</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">CAREERS</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">+ INFO</a>
+              </li>
+            </div>
+          </ul>
+
+          <ul class="categories" data-id="masculino">
+            <div class="categories__division">
+              <li class="item" data-new-option="true">
+                <a href="#" class="link">// NEW</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+            
+            <div class="categories__division">
+              <li class="item" data-new="true">
+                <a href="#" class="link">ZARA SRPLS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="update">
+                <a href="#" class="link">ZARA ORIGINS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+
+            <div class="categories__division">
+              <li class="item" data-new="false">
+                <a href="#" class="link">CASACOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">JAQUETAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">COLETES</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">SOBRECAMISAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">CAMISAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">CALÇAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">JEANS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">CAMISETAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">TRICOT</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">MOLETONS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">TERNOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">BLAZERS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">CONJUNTOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">JOGGING</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">POLOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">BERMUDAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">SAPATOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">BOLSAS | MOCHILAS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">PERFUMES</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">ACESSÓRIOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">SUMMER SELECTION</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+
+              <li class="item" data-new="update" data-category="sale">
+                <a href="#" class="link">SPECIAL PRICES</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+
+            <div class="categories__division categories__division__btn">
+              <li class="category__option__title">
+                ZARA ATHLETICZ
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">SPECIAL EDITION</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">CLARKS®</a>
+              </li>
+            </div>
+
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">CARTÃO PRESENTE</a>
+              </li>
+            </div>
+
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">JOIN LIFE</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">CAREERS</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">+ INFO</a>
+              </li>
+            </div>
+          </ul>
+
+          <ul class="categories" data-id="kids">
+            <div class="categories__division">
+              <li class="item" data-new="true">
+                <a href="#" class="link">ZARA SRPLS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+            
+            <div class="categories__division">
+              <li class="category__option__title">
+                MENINA
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">1 - 6 ANOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item" data-new="false">
+                <a href="#" class="link">6 - 14 ANOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+
+            <div class="categories__division">
+              <li class="category__option__title">
+                MENINO
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">1 - 6 ANOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item" data-new="false">
+                <a href="#" class="link">6 - 14 ANOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+
+            <div class="categories__division">
+              <li class="category__option__title">
+                BEBÊ
+              </li>
+
+              <li class="item" data-new="false">
+                <a href="#" class="link">8 - 18 MESES</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+
+            <div class="categories__division">
+              <li class="item" data-new="false">
+                <a href="#" class="link">ACESSÓRIOS | SAPATOS | 0 14 ANOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item" data-new="false">
+                <a href="#" class="link">PERSONALIZÁVEL | 0 14 ANOS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="true">
+                <a href="#" class="link">RAINWEAR</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">IN RESIDENCE ZARA STUDIO</a>
+              </li>
+              <li class="item__btn" data-new="true">
+                <a href="#" class="link">TRUE NEUTRALS</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">CARTÃO PRESENTE</a>
+              </li>
+            </div>
+
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">JOIN LIFE</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">CAREERS</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">+ INFO</a>
+              </li>
+            </div>
+          </ul>
+
+          <ul class="categories" data-id="sale">
+            <div class="categories__division">
+              <li class="item" data-new="false">
+                <a href="#" class="link">MULHER</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item" data-new="false">
+                <a href="#" class="link">HOMEM</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item" data-new="false">
+                <a href="#" class="link">KIDS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">+ INFO</a>
+              </li>
+            </div>
+          </ul>
+
+          <ul class="categories" data-id="bolsas">
+            <div class="categories__division">
+              <li class="item" data-new="false">
+                <a href="#" class="link">MULHER</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item" data-new="false">
+                <a href="#" class="link">HOMEM</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item" data-new="false">
+                <a href="#" class="link">KIDS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">+ INFO</a>
+              </li>
+            </div>
+          </ul>
+
+          <ul class="categories" data-id="perfumes">
+            <div class="categories__division">
+              <li class="item" data-new="false">
+                <a href="#" class="link">MULHER</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item" data-new="false">
+                <a href="#" class="link">HOMEM</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item" data-new="false">
+                <a href="#" class="link">KIDS</a>
+                <div class="arrow__container">
+                  <svg class="arrow__icon">
+                    <use xlink:href="./__spritemap#sprite-arrow"></use>
+                  </svg>
+                </div>
+              </li>
+            </div>      
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">CARTÃO PRESENTE</a>
+              </li>
+            </div>
+            <div class="categories__division categories__division__btn">
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">JOIN LIFE</a>
+              </li>
+              <li class="item__btn" data-new="false">
+                <a href="#" class="link">+ INFO</a>
+              </li>
+            </div>
+          </ul>
+
+          <div class="new__products__popup" aria-hidden="true" data-frame="true">
+            <h3 class="title">// NEW</h3>
+
+            <div class="carrousel__products__container" data-carrousel="1">
+              <div class="container__slide__products" data-scroll="true">
+                <div class="product__item">
+
+                  <div class="container__image__product">
+
+                    <div class="container__images">
+
+                      <picture class="container__images__picture">
+                        <source srcset="./assets/images/webp/0155-1.webp" type="image/webp">
+                        <img src="./assets/images/0155-1.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                      <picture class="container__images__picture backphoto">
+                        <source srcset="./assets/images/webp/0155-2.webp" type="image/webp">
+                        <img src="./assets/images/0155-2.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                    </div>
+
+                    <button class="add-cart__btn btn icon__btn">
+                      <svg>
+                        <use xlink:href="./__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+                  
+                  <span class="product__item__title">COLETE ACOLCHOADO</span>
+
+                  <div class="product__card__price__container" data-discount="true" data-price="379,0" data-discount-amount="40">
+                  </div>
+
+                </div>
+
+                <div class="product__item">
+
+                  <div class="container__image__product">
+
+                    <div class="container__images">
+
+                      <picture class="container__images__picture">
+                        <source srcset="./assets/images/webp/0155-1.webp" type="image/webp">
+                        <img src="./assets/images/0155-1.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                      <picture class="container__images__picture backphoto">
+                        <source srcset="./assets/images/webp/0155-2.webp" type="image/webp">
+                        <img src="./assets/images/0155-2.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                    </div>
+
+                    <button class="add-cart__btn btn icon__btn">
+                      <svg>
+                        <use xlink:href="./__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+                  
+                  <span class="product__item__title">COLETE ACOLCHOADO</span>
+
+                  <div class="product__card__price__container" data-discount="true" data-price="379,0" data-discount-amount="40">
+                  </div>
+
+                </div>
+
+                <div class="product__item">
+
+                  <div class="container__image__product">
+
+                    <div class="container__images">
+
+                      <picture class="container__images__picture">
+                        <source srcset="./assets/images/webp/0155-1.webp" type="image/webp">
+                        <img src="./assets/images/0155-1.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                      <picture class="container__images__picture backphoto">
+                        <source srcset="./assets/images/webp/0155-2.webp" type="image/webp">
+                        <img src="./assets/images/0155-2.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                    </div>
+
+                    <button class="add-cart__btn btn icon__btn">
+                      <svg>
+                        <use xlink:href="./__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+                  
+                  <span class="product__item__title">COLETE ACOLCHOADO</span>
+
+                  <div class="product__card__price__container" data-discount="true" data-price="379,0" data-discount-amount="40">
+                  </div>
+
+                </div>
+
+                <div class="product__item">
+
+                  <div class="container__image__product">
+
+                    <div class="container__images">
+
+                      <picture class="container__images__picture">
+                        <source srcset="./assets/images/webp/0155-1.webp" type="image/webp">
+                        <img src="./assets/images/0155-1.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                      <picture class="container__images__picture backphoto">
+                        <source srcset="./assets/images/webp/0155-2.webp" type="image/webp">
+                        <img src="./assets/images/0155-2.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                    </div>
+
+                    <button class="add-cart__btn btn icon__btn">
+                      <svg>
+                        <use xlink:href="./__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+                  
+                  <span class="product__item__title">COLETE ACOLCHOADO</span>
+
+                  <div class="product__card__price__container" data-discount="true" data-price="379,0" data-discount-amount="40">
+                  </div>
+
+                </div>
+
+                <div class="product__item">
+
+                  <div class="container__image__product">
+
+                    <div class="container__images">
+
+                      <picture class="container__images__picture">
+                        <source srcset="./assets/images/webp/0155-1.webp" type="image/webp">
+                        <img src="./assets/images/0155-1.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                      <picture class="container__images__picture backphoto">
+                        <source srcset="./assets/images/webp/0155-2.webp" type="image/webp">
+                        <img src="./assets/images/0155-2.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                    </div>
+
+                    <button class="add-cart__btn btn icon__btn">
+                      <svg>
+                        <use xlink:href="./__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+                  
+                  <span class="product__item__title">COLETE ACOLCHOADO</span>
+
+                  <div class="product__card__price__container" data-discount="true" data-price="379,0" data-discount-amount="40">
+                  </div>
+
+                </div>
+
+                <div class="product__item">
+
+                  <div class="container__image__product">
+
+                    <div class="container__images">
+
+                      <picture class="container__images__picture">
+                        <source srcset="./assets/images/webp/0155-1.webp" type="image/webp">
+                        <img src="./assets/images/0155-1.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                      <picture class="container__images__picture backphoto">
+                        <source srcset="./assets/images/webp/0155-2.webp" type="image/webp">
+                        <img src="./assets/images/0155-2.jpeg" alt="Produto em destaque" draggable="false">
+                      </picture>
+
+                    </div>
+
+                    <button class="add-cart__btn btn icon__btn">
+                      <svg>
+                        <use xlink:href="./__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+                  
+                  <span class="product__item__title">COLETE ACOLCHOADO</span>
+
+                  <div class="product__card__price__container" data-discount="true" data-price="379,0" data-discount-amount="40">
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="carrousel__products__container__scroll-bar">
+                <div class="progress"></div>
+              </div>
+            </div>
+
+            <a href="#" class="link">VEJA MAIS</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="header__logo__container">
+        <a href="index.html">
+          <svg class="logo">
+            <use xlink:href="./__spritemap#sprite-zara-logo"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="header__options">
+
+        <div class="header__options__search">
+          <input type="text" class="search__input input">
+          <button class="btn search__btn">
+            <svg class="search__icon">
+              <use xlink:href="./__spritemap#sprite-search"></use>
+            </svg>
+            <span>PESQUISAR</span>
+          </button>
+        </div>
+        <ul class="header__options__btn">
+          <li class="item">
+            <button class="btn profile__btn">
+              <svg class="profile__icon">
+                <use xlink:href="./__spritemap#sprite-profile"></use>
+              </svg>
+              <span class="text">LOGIN</span>
+            </button>
+          </li>
+          <li class="item">
+            <button class="btn bag__btn">
+              <svg class="bag__icon">
+                <use xlink:href="./__spritemap#sprite-bag"></use>
+              </svg>
+              <span class="text bag__text">CESTO <span>(0)</span></span>
+            </button>
+          </li>
+          <li class="item">
+            <button class="btn mode__btn" data-theme="light">
+              <svg class="mode__icon">
+                <use xlink:href="./__spritemap#sprite-sun"></use>
+              </svg>
+              <span class="text mode__text">CLARO</span>
+            </button>
+          </li>
+        </ul>
+
+      </div>
+    </header>
+
+    <main class="section">
+      <section class="carrousel__products__container" data-carrousel="2">
+
+        <section class="products__container" data-scroll="true">
 
           <div class="product__card">
 
@@ -26,18 +1141,18 @@
                 <picture class="product__card__image">
                   <source srcset="assets/images/webp/0155-1.webp" type="image/webp">
                   <source srcset="./assets/images/0155-1.jpeg" type="image/jpeg">
-                  <img src="assets/images/0155-1.jpg" alt="">
+                  <img src="assets/images/0155-1.jpg" alt="" draggable="false">
                 </picture>
 
                 <picture class="product__card__image backphoto">
                   <source srcset="assets/images/webp/0155-2.webp" type="image/webp">
                   <source srcset="./assets/images/0155-2.jpeg" type="image/jpeg">
-                  <img src="assets/images/0155-2.jpg" alt="">
+                  <img src="assets/images/0155-2.jpg" alt="" draggable="false">
                 </picture>
 
               </div>
 
-              <button class="add-cart__btn">
+              <button class="add-cart__btn btn icon__btn">
                 <svg>
                   <use xlink:href="./__spritemap#sprite-plus"></use>
                 </svg>
@@ -69,18 +1184,18 @@
                 <picture class="product__card__image">
                   <source srcset="assets/images/webp/1063-1.webp" type="image/webp">
                   <source srcset="./assets/images/1063-1.jpeg" type="image/jpeg">
-                  <img src="assets/images/1063-1.jpeg" alt="">
+                  <img src="assets/images/1063-1.jpeg" alt="" draggable="false">
                 </picture>
 
                 <picture class="product__card__image backphoto">
                   <source srcset="assets/images/webp/1063-2.webp" type="image/webp">
                   <source srcset="./assets/images/1063-2.jpeg" type="image/jpeg">
-                  <img src="assets/images/1063-2.jpeg" alt="">
+                  <img src="assets/images/1063-2.jpeg" alt="" draggable="false">
                 </picture>
 
               </div>
 
-              <button class="add-cart__btn">
+              <button class="add-cart__btn btn icon__btn">
                 <svg>
                   <use xlink:href="./__spritemap#sprite-plus"></use>
                 </svg>
@@ -110,18 +1225,18 @@
                 <picture class="product__card__image">
                   <source srcset="assets/images/webp/5585-1.webp" type="image/webp">
                   <source srcset="./assets/images/5585-1.jpeg" type="image/jpeg">
-                  <img src="assets/images/5585-1.jpeg" alt="">
+                  <img src="assets/images/5585-1.jpeg" alt="" draggable="false">
                 </picture>
 
                 <picture class="product__card__image backphoto">
                   <source srcset="assets/images/webp/5585-2.webp" type="image/webp">
                   <source srcset="./assets/images/5585-2.jpeg" type="image/jpeg">
-                  <img src="assets/images/5585-2.jpg" alt="">
+                  <img src="assets/images/5585-2.jpg" alt="" draggable="false">
                 </picture>
 
               </div>
 
-              <button class="add-cart__btn">
+              <button class="add-cart__btn btn icon__btn">
                 <svg>
                   <use xlink:href="./__spritemap#sprite-plus"></use>
                 </svg>
@@ -151,18 +1266,18 @@
                 <picture class="product__card__image">
                   <source srcset="assets/images/webp/6985-1.webp" type="image/webp">
                   <source srcset="./assets/images/6985-1.jpeg" type="image/jpeg">
-                  <img src="assets/images/6985-1.jpeg" alt="">
+                  <img src="assets/images/6985-1.jpeg" alt="" draggable="false">
                 </picture>
 
                 <picture class="product__card__image backphoto">
                   <source srcset="assets/images/webp/6985-2.webp" type="image/webp">
                   <source srcset="./assets/images/6985-2.jpeg" type="image/jpeg">
-                  <img src="assets/images/6985-2.jpg" alt="">
+                  <img src="assets/images/6985-2.jpg" alt="" draggable="false">
                 </picture>
 
               </div>
 
-              <button class="add-cart__btn">
+              <button class="add-cart__btn btn icon__btn">
                 <svg>
                   <use xlink:href="./__spritemap#sprite-plus"></use>
                 </svg>
@@ -192,18 +1307,18 @@
                 <picture class="product__card__image">
                   <source srcset="assets/images/webp/7545-1.webp" type="image/webp">
                   <source srcset="./assets/images/7545-1.jpeg" type="image/jpeg">
-                  <img src="assets/images/7545-1.jpeg" alt="">
+                  <img src="assets/images/7545-1.jpeg" alt="" draggable="false">
                 </picture>
 
                 <picture class="product__card__image backphoto">
                   <source srcset="assets/images/webp/7545-2.webp" type="image/webp">
                   <source srcset="./assets/images/7545-2.jpeg" type="image/jpeg">
-                  <img src="assets/images/7545-2.jpg" alt="">
+                  <img src="assets/images/7545-2.jpg" alt="" draggable="false">
                 </picture>
 
               </div>
 
-              <button class="add-cart__btn">
+              <button class="add-cart__btn btn icon__btn">
                 <svg>
                   <use xlink:href="./__spritemap#sprite-plus"></use>
                 </svg>
@@ -233,18 +1348,18 @@
                 <picture class="product__card__image">
                   <source srcset="assets/images/webp/8574-1.webp" type="image/webp">
                   <source srcset="./assets/images/8574-1.jpeg" type="image/jpeg">
-                  <img src="assets/images/8574-1.jpeg" alt="">
+                  <img src="assets/images/8574-1.jpeg" alt="" draggable="false">
                 </picture>
 
                 <picture class="product__card__image backphoto">
                   <source srcset="assets/images/webp/8574-2.webp" type="image/webp">
                   <source srcset="./assets/images/8574-2.jpeg" type="image/jpeg">
-                  <img src="assets/images/8574-2.jpg" alt="">
+                  <img src="assets/images/8574-2.jpg" alt="" draggable="false">
                 </picture>
 
               </div>
 
-              <button class="add-cart__btn">
+              <button class="add-cart__btn btn icon__btn">
                 <svg>
                   <use xlink:href="./__spritemap#sprite-plus"></use>
                 </svg>
@@ -274,18 +1389,18 @@
                 <picture class="product__card__image">
                   <source srcset="assets/images/webp/0155-1.webp" type="image/webp">
                   <source srcset="./assets/images/0155-1.jpeg" type="image/jpeg">
-                  <img src="assets/images/0155-1.jpg" alt="">
+                  <img src="assets/images/0155-1.jpg" alt="" draggable="false">
                 </picture>
 
                 <picture class="product__card__image backphoto">
                   <source srcset="assets/images/webp/0155-2.webp" type="image/webp">
                   <source srcset="./assets/images/0155-2.jpeg" type="image/jpeg">
-                  <img src="assets/images/0155-2.jpg" alt="">
+                  <img src="assets/images/0155-2.jpg" alt="" draggable="false">
                 </picture>
 
               </div>
 
-              <button class="add-cart__btn">
+              <button class="add-cart__btn btn icon__btn">
                 <svg>
                   <use xlink:href="./__spritemap#sprite-plus"></use>
                 </svg>
@@ -315,7 +1430,6 @@
         </div>
 
       </section>
-
     </main>
   </body>
 

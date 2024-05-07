@@ -62,23 +62,33 @@ $font-family: 'Helvetica-Neue', sans-serif;
 
 $primary-color: #fff;
 $secondary-color: #000;
+$primary-color-opacity: rgba(255, 255, 255, 0.7);
+$secondary-color-opacity: rgba(0, 0, 0, 0.4);
 
 $progress-bar-bg: #cccccc;
 $progress-bar-progress: #000;
 $progress-bar-bg-dark: #5f5f5f;
 $progress-bar-progress-dark: #fff;
 
+$attention-color: rgb(244, 99, 171);
+
 :root{
     --primary-color: #{$primary-color};
     --secondary-color: #{$secondary-color};
+    --primary-color-opacity: #{$primary-color-opacity};
+    --secondary-color-opacity: #{$secondary-color-opacity};
 
     --progress-bar-bg: #{$progress-bar-bg};
     --progress-bar-progress: #{$progress-bar-progress};
+
+    --attention-color: #{$attention-color};
 }
 
 body[data-theme="dark"]{
     --primary-color: #{$secondary-color};
     --secondary-color: #{$primary-color};
+    --primary-color-opacity: #{$secondary-color-opacity};
+    --secondary-color-opacity: #{$primary-color-opacity};
 
     --progress-bar-bg: #{$progress-bar-bg-dark};
     --progress-bar-progress: #{$progress-bar-progress-dark};

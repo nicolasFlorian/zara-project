@@ -5,7 +5,7 @@
         transform: scaleX(1);
     }
     50% {
-        transform: scaleX(1.008);
+        transform: scaleX(1.003);
     }
     100% {
         transform: scaleX(1);
@@ -26,7 +26,115 @@
     }
 }
 
+@keyframes arrowAnimationIn{
+    0% {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes arrowAnimationOut{
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes showDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+@keyframes arrowMoving{
+    0% {
+        transform: translateX(0);
+    }
+    24% {
+        transform: translateX(-5px);
+    }
+    32% {
+        transform: translateX(5px);
+    }
+    40% {
+        transform: translateX(-5px);
+    }
+    48% {
+        transform: translateX(2px);
+    }
+    56% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes touchMoving{
+    0% {
+        transform: translateX(2px) rotate(35deg) translateY(0);
+    }
+    50% {
+        transform: translateX(0px) rotate(0deg) translateY(0);
+    }
+    100% {
+        transform: translateX(-2px) rotate(-35deg) translateY(0);
+    }
+}
+
+.arrowAnimationIn{
+    animation: arrowAnimationIn 0.5s ease forwards;
+}
+
+.arrowAnimationOut{
+    animation: arrowAnimationOut 0.5s ease forwards;
+}
+
+.touchMoving{
+    animation: touchMoving 2s ease alternate infinite;
+}
+
 .scaleBar{
     animation: scaleBar .5s ease;
     transform-origin: left;
+}
+
+.showUp{
+    animation: showUp .5s ease forwards;
+}
+
+.showDown{
+    animation: showDown .5s ease forwards;
+}
+
+.arrowMoving{
+    animation: arrowMoving 4s ease infinite;
 }
