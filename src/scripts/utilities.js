@@ -18,4 +18,16 @@ export class Utilities {
     clamp(value, min, max) {
         return Math.min(Math.max(value, min), max);
     }
+
+    deepMerge(defaults, options) {
+        const result = { ...defaults };
+        for (const [key, value] of Object.entries(options)) {
+            if (value instanceof Object && key in defaults) {
+                result[key] = this.deepMerge(defaults[key], value);
+            } else {
+                result[key] = value;
+            }
+        }
+        return result;
+    }
 }

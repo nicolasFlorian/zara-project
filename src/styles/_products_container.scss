@@ -173,18 +173,11 @@
     @include m.breakpoint('all-sm'){
         gap: 20px;
     }
+}
 
-    &__scroll-bar{
-        width: 100%;
-        height: 1px;
-        background-color: var(--progress-bar-bg);
-        border-radius: 50px;
-
-        .progress{
-            height: 100%;
-            background-color: var(--progress-bar-progress);
-            width: 20%;
-            border-radius: 50px;
-        }
+.scrollbar__track{
+    background-color: var(--progress-bar-bg) !important;
+    .scrollbar__thumb{
+        background-color: var(--progress-bar-progress) !important;
     }
 }
