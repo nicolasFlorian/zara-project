@@ -17,9 +17,8 @@ export default {
             }
         }),
     ],
-    root: './src',
-    base: './',
+    base: '/',
     build: {
-        outDir: '../dist',
+        outDir: 'dist',
     }
 }
