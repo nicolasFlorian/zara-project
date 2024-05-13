@@ -344,7 +344,7 @@ export class Scroller {
         let scrollSize = this.axis === 'x' ? this.element.scrollWidth : this.element.scrollHeight;
         let clientSize = this.axis === 'x' ? this.element.clientWidth : this.element.clientHeight;
         let thumbSize = (clientSize / scrollSize) * 100;
-        this.scrollBarThumb.style.setProperty('width', `${thumbSize}%`);
+        this.scrollBarThumb.style.setProperty((this.axis === 'x' ? 'width' : 'height'), `${thumbSize}%`);
 
         this.element.addEventListener('scroll', () => {
             let scrollSize = this.axis === 'x' ? this.element.scrollWidth : this.element.scrollHeight;
@@ -468,7 +468,7 @@ export class Scroller {
             let newThumbSize = (scrollPercentage * (100 - this.initialSize)) + this.initialSize; 
             newThumbSize = utilities.clamp(newThumbSize, this.initialSize, 100);
   
-            this.scrollBarThumb.style.width = `${newThumbSize}%`;
+            this.scrollBarThumb.style[this.axis==='x' ? 'width' : 'height'] = `${newThumbSize}%`;
         }
 
     // INERTIA ANIMATION

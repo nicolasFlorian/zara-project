@@ -60,36 +60,30 @@ $font-family: 'Helvetica-Neue', sans-serif;
 
 // COLORS
 
-$primary-color: #fff;
-$secondary-color: #000;
-$primary-color-opacity: rgba(255, 255, 255, 0.7);
-$secondary-color-opacity: rgba(0, 0, 0, 0.4);
-
-$progress-bar-bg: #cccccc;
-$progress-bar-progress: #000;
-$progress-bar-bg-dark: #5f5f5f;
-$progress-bar-progress-dark: #fff;
-
-$attention-color: rgb(244, 99, 171);
-
 :root{
-    --primary-color: #{$primary-color};
-    --secondary-color: #{$secondary-color};
-    --primary-color-opacity: #{$primary-color-opacity};
-    --secondary-color-opacity: #{$secondary-color-opacity};
+    --bg-default: #ffffff;
+    --primary-color: #f0f0f0;
+    --secondary-color: #000000;
+    --attention-color: #f463ab;
+    --danger-color: #ce2727;
+    --success-color: #2cac63;
 
-    --progress-bar-bg: #{$progress-bar-bg};
-    --progress-bar-progress: #{$progress-bar-progress};
+    --progress-bar-bg: #ccc;
 
-    --attention-color: #{$attention-color};
+    --opacity: 0.7;
+
+    --border-thickness: 0.5px;
+
+    --letter-spacing: 0.5px;
 }
 
 body[data-theme="dark"]{
-    --primary-color: #{$secondary-color};
-    --secondary-color: #{$primary-color};
-    --primary-color-opacity: #{$secondary-color-opacity};
-    --secondary-color-opacity: #{$primary-color-opacity};
+    --bg-default: #000000;
+    --primary-color: #404040;
+    --secondary-color: #ffffff;
 
-    --progress-bar-bg: #{$progress-bar-bg-dark};
-    --progress-bar-progress: #{$progress-bar-progress-dark};
+    --progress-bar-bg: #5f5f5f;
+    --progress-bar-progress: #ffffff;
+
+    --opacity: 0.8;
 }

@@ -1,0 +1,93 @@
+.modal__container.login{
+  .modal__body{
+    .form{
+      display: grid;
+      gap: 20px;
+
+      .form__group{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      &__input{
+        padding-block: 5px;
+        border: none;
+        border-bottom: var(--border-thickness) solid var(--secondary-color);
+        outline: none;
+        font-weight: 300;
+        letter-spacing: var(--letter-spacing);
+        background: transparent;
+        color: var(--secondary-color);
+      }
+
+      &__label{
+        color: var(--secondary-color);
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: var(--letter-spacing);
+        text-transform: uppercase;
+      }
+
+      &__error{
+        color: var(--danger-color);
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: var(--letter-spacing);
+        text-transform: uppercase;
+        display: none;
+      }
+
+      &__link{
+        align-self: end;
+        color: var(--secondary-color);
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: var(--letter-spacing);
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        opacity: var(--opacity);
+        transition: all 0.3s ease;
+
+        &:hover{
+          text-decoration: underline;
+          opacity: 1;
+        }
+      }
+
+      &__error, &__link{
+        margin-top: 5px;
+      }
+
+      &__btn{
+        border: var(--border-thickness) solid var(--secondary-color);
+        font-weight: 300;
+        letter-spacing: var(--letter-spacing);
+        color: var(--secondary-color);
+
+        &:hover{
+          background-color: var(--secondary-color);
+          color: var(--bg-default);
+        }
+      }
+
+
+    }
+
+    .register__btn{
+      background-color: var(--bg-default);
+      border: var(--border-thickness) solid var(--secondary-color);
+      font-weight: 300;
+      letter-spacing: var(--letter-spacing);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: var(--secondary-color);
+
+      &:hover{
+        background-color: var(--secondary-color);
+        color: var(--bg-default);
+      }
+    }
+  }
+}

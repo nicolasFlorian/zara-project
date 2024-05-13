@@ -5,7 +5,8 @@ export class Utilities {
     }
 
     changeIcon(selector, newIconId) {
-        const icon = document.querySelector(`${selector}`);
+        this.selector = typeof selector === 'string' ? document.querySelector(selector) : selector;
+        const icon = this.selector;
         const iconUse = icon.querySelector('use');
         iconUse.remove();
         const newIconRef = `./__spritemap#sprite-${newIconId}`;
@@ -29,5 +30,26 @@ export class Utilities {
             }
         }
         return result;
+    }
+
+    createElements(html){
+        const template = document.createElement('template');
+        template.innerHTML = html;
+        return template.content.children;
+    }
+
+    showNotification(message, type, where = document.querySelector('body'), duration = 3000) {
+        const whereElement = typeof where === 'string' ? document.querySelector(where) : where;
+        whereElement.style.position = 'relative';
+        const notification = this.createElements(`<div class="notification notification--${type} showUp"></div>`)[0];
+        notification.textContent = message;
+        whereElement.appendChild(notification);
+        setTimeout(() => {
+            notification.classList.remove('showUp');
+            notification.classList.add('showDown');
+            notification.addEventListener('animationend', () => {
+                notification.remove();
+            });
+        }, duration);
     }
 }

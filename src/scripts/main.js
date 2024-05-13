@@ -2,12 +2,18 @@ import { showDescription } from "./containerCard.js";
 import { discountElement } from "./discountPrice.js";
 import { changeTheme } from "./themeChange.js";
 import { Scroller } from "./scroller.js";
+import {} from "./menu.js";
+import {} from "./generateProducts.js";
+import { openModal } from "./openModal.js";
+import { showSizes, hideSizes, updateCartCount, updateCartModal } from "./handleCar.js";
+import {} from "./handleSearchInput.js";
+
 
 // SCROLLER
 
-const scroller = new Scroller();
+const productsSliderScroller = new Scroller();
 const productsSlider = document.querySelector('.products__container');
-scroller.init(productsSlider, {
+productsSliderScroller.init(productsSlider, {
     axis: 'x',
     grab: true,
     wheel: true,
@@ -15,7 +21,7 @@ scroller.init(productsSlider, {
     scrollBar:{
         enabled: true,
         type: 'progress',
-        height: '1px',
+        height: '0.5px',
         gap: '20px',
         initialSize: 1,
     }
@@ -45,4 +51,41 @@ priceArea.forEach(element => {
 })
 
 
+// SHOW MODAL LOGIN
 
+const loginBtn = document.querySelector('.profile__btn');
+const loginModal = document.querySelector('.modal__container.login');
+openModal(loginBtn, loginModal);
+
+
+// SHOW MODAL CART
+
+const cartBtn = document.querySelector('.bag__btn');
+const cartModal = document.querySelector('.modal__container.cart');
+openModal(cartBtn, cartModal);
+
+
+// SHOW SIZES
+
+let isClicked = false;
+
+const addBtns = document.querySelectorAll('.add-cart__btn');
+addBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    showSizes(e);
+    isClicked = true;
+  });
+});
+
+window.addEventListener('click', (e) => {
+    if(e.target.closest('.buttons__container')) return isClicked;
+    if(isClicked) {
+        hideSizes(e, isClicked);
+    }
+    isClicked = hideSizes(e, isClicked);
+});
+
+// UPDATE CART
+
+document.addEventListener('DOMContentLoaded', updateCartCount());
+document.addEventListener('DOMContentLoaded', updateCartModal());

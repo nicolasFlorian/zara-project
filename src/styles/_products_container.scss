@@ -2,6 +2,15 @@
 @use 'mixins' as m;
 @use 'functions' as f;
 
+main.section{
+    .scrollbar__track{
+        background-color: var(--progress-bar-bg) !important;
+        .scrollbar__thumb{
+            background-color: var(--secondary-color) !important;
+        }
+    }
+}
+
 .products__container{
     display: grid;
     grid-template-columns: repeat(5, minmax(calc(20% - 20px), 1fr));
@@ -29,16 +38,14 @@
         flex-direction: column;   
         gap: 6px;   
 
-        .product__card__image__container{
+        &__image__container{
             position: relative;
-            display: flex;
-            justify-content: center;
 
             .product__card__image__element__container{
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                border: 1px solid var(--secondary-color);
+                border: var(--border-thickness) solid var(--secondary-color);
                 overflow: hidden;
 
                 &:hover{
@@ -67,34 +74,82 @@
                     transform: translateY(100%);
                 }
             }
-            .add-cart__btn{
+
+            .buttons__container{
                 position: absolute;
-                bottom: 30px;
-                background-color: var(--primary-color);
-                border: 1px solid var(--secondary-color);
+                bottom: 0;
+                display: grid;
+                gap: 2px;
+                padding-bottom: 20px;
                 z-index: 2;
-                box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.5);
-                transition: all 0.3s ease;
+                justify-content: center;
+                width: 100%;
 
-                &:hover{
-                    transform: scale(1.2);
+                .add-cart__btn{
+                    width: 100%;
+                    border: var(--border-thickness) solid var(--secondary-color);
+                    background-color: var(--bg-default);
+                    color: var(--secondary-color);
+                    opacity: var(--opacity);
+                    transition: all 0.3s ease;
+                    aspect-ratio: 1/1;
+
+                    svg{
+                        fill: var(--secondary-color);
+                    }
+
+                    &:hover{
+                        opacity: 1;
+                        transform: scale(1.1);
+                    }
                 }
+            }
 
-                svg{
-                    width: 14px;
-                    height: 14px;
+            .buttons__container[data-mode="size"]{
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+                padding: 4px;
+                
+                .size__btn{
+                    width: 100%;
+                    border: var(--border-thickness) solid var(--secondary-color);
+                    background-color: var(--bg-default);
+                    color: var(--secondary-color);
+                    opacity: var(--opacity);
+                    transition: all 0.3s ease;
+
+                    &:hover{
+                        opacity: 1;
+                        transform: scale(1.02);
+                    }
+                }
+                .size__btn.disabled{
+                    background-color: rgba(0, 0, 0, 0.2);
+                    color: #ffffff;
+                    border: var(--border-thickness) solid var(--secondary-color);
+                    pointer-events: none;
+                }
+                .add-cart__btn{
+                    display: none;
                 }
             }
         }
 
-        &__title, &__price, &__description{
+        .product__card__title__info{
+            margin-top: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__title, &__price, &__description, &__ref{
             font-size: f.rem(12);
             display: block;
             color: var(--secondary-color);
+            font-weight: 300;
         }
 
         &__title{
-            margin-top: 4px;
+            letter-spacing: var(--letter-spacing);
         }
 
         &__price__container[data-discount="true"]{
@@ -102,6 +157,7 @@
             align-items: center;
             gap: 6px;
             text-wrap: nowrap;
+
             @include m.breakpoint('xxs'){
                 flex-direction: column;
                 align-items: flex-start;
@@ -122,8 +178,13 @@
 
                 span{
                     color: var(--primary-color);
+                    font-weight: 400;
                 }
             }
+        }
+
+        &__price{
+            font-weight: 400;
         }
 
         &__description{
@@ -143,7 +204,7 @@
                 position: absolute;
                 bottom: -1px;
                 left: 0;
-                background: linear-gradient(180deg, transparent 20%, var(--primary-color) 70%);
+                background: linear-gradient(180deg, transparent 20%, var(--bg-default) 70%);
                 z-index: 1;
                 transition: opacity 0.3s ease;
             }
@@ -163,6 +224,10 @@
                 overflow: hidden;
             }
         }
+
+        &__ref{
+            opacity: var(--opacity);
+        }
     }
 }
 
@@ -172,12 +237,5 @@
     gap: 40px;
     @include m.breakpoint('all-sm'){
         gap: 20px;
-    }
-}
-
-.scrollbar__track{
-    background-color: var(--progress-bar-bg) !important;
-    .scrollbar__thumb{
-        background-color: var(--progress-bar-progress) !important;
     }
 }
