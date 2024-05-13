@@ -44,8 +44,8 @@ function displaySearchResults(results) {
     <div class="search__result">
       <div class="image__container">
         <picture>
-          <source srcset="../public/assets/images/webp/${result.imgs.main.srcWebp}" type="image/webp">
-          <img src="../public/assets/images/${result.imgs.main.srcJpeg}" alt="${result.imgs.main.alt}">
+          <source srcset="./assets/images/webp/${result.imgs.main.srcWebp}" type="image/webp">
+          <img src="./assets/images/${result.imgs.main.srcJpeg}" alt="${result.imgs.main.alt}">
         </picture>
       </div>
       <div class="search__content">
