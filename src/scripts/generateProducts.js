@@ -17,13 +17,13 @@ export function generateProducts(howMany = catalog.length, where) {
       <div class="product__card__image__element__container">
 
         <picture class="product__card__image">
-          <source srcset="assets/images/webp/${images.main.srcWebp}" type="image/webp">
-          <img src="assets/images/${images.main.srcJpeg}" alt="${images.main.alt}" draggable="false">
+          <source srcset="../public/assets/images/webp/${images.main.srcWebp}" type="image/webp">
+          <img src="../public/assets/images/${images.main.srcJpeg}" alt="${images.main.alt}" draggable="false">
         </picture>
 
         <picture class="product__card__image backphoto">
-          <source srcset="assets/images/webp/${images.secondary.srcWebp}" type="image/webp">
-          <img src="assets/images/${images.secondary.srcJpeg}" alt="${images.secondary.alt}" draggable="false">
+          <source srcset="../public/assets/images/webp/${images.secondary.srcWebp}" type="image/webp">
+          <img src="../public/assets/images/${images.secondary.srcJpeg}" alt="${images.secondary.alt}" draggable="false">
         </picture>
 
       </div>

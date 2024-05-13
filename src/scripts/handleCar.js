@@ -111,8 +111,8 @@ export function updateCartModal() {
       <div class="item" data-id="${item.id}">
         <div class="item__image">
           <picture>
-          <source srcset="assets/images/webp/${item.image.srcWebp}" type="image/webp">
-          <img src="assets/images/${item.image.srcJpeg}" alt="${item.image.alt}" draggable="false">
+          <source srcset="../public/assets/images/webp/${item.image.srcWebp}" type="image/webp">
+          <img src="../public/assets/images/${item.image.srcJpeg}" alt="${item.image.alt}" draggable="false">
           </picture>
         </div>
         <div class="item__info">
